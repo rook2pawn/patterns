@@ -1,0 +1,81 @@
+div.calendarMobile {
+  width: 100%;
+}
+
+div.calendarMobile section.navContainer {
+  height: 5vh;
+  color: #7d8994;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.calendarMobile .nav.prev {
+  width: 4.5vh;
+  height: 4.5vh;
+  background-image: url(/left-arrow-previous-svgrepo-com.svg);
+  background-repeat: no-repeat;
+}
+div.calendarMobile .nav.next {
+  width: 4.5vh;
+  height: 4.5vh;
+  background-image: url(/right-arrow-next-svgrepo-com.svg);
+  background-repeat: no-repeat;
+}
+
+div.calendarMobile ul.days {
+  list-style-type: none;
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+div.calendarMobile ul.dates {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+
+div.calendarMobile ul.dates li.prev {
+  color: #ccc;
+}
+div.calendarMobile ul.dates li {
+  width: 4.5vh;
+  height: 4.5vh;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+}
+
+div.calendarMobile ul.dates li.circle {
+  border: 2px solid;
+  border-radius: 50%;
+}
+div.calendarMobile ul.dates li.circle span {
+  position: absolute;
+  top: -0.75vh;
+  right: -0.5vh;
+  width: 2vh;
+  height: 2vh;
+  font-size: 1.3vh;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 2vh;
+}
+
+div.calendarMobile ul.dates li.circle.orange {
+  border-color: #de6e46;
+}
+div.calendarMobile ul.dates li.circle.orange span {
+  background-color: #226799;
+}
+div.calendarMobile ul.dates li.active {
+  background: #de6e46;
+  color: #ffffff;
+  border-radius: 50%;
+}

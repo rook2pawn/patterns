@@ -1,0 +1,27 @@
+{
+  "name": "choo-app-start",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "choo": "^7.1.0",
+    "choo-devtools": "^3.0.4",
+    "http-server": "^13.0.1",
+    "nanocomponent": "^6.6.0",
+    "nanohtml": "^1.9.1",
+    "nanostate": "^1.2.1",
+    "sheetify": "^8.0.0",
+    "watchify": "^4.0.0"
+  },
+  "scripts": {
+    "start-secure": "http-server --ssl --cert cert.pem --key key.pem  ./web -o -c-1 -p 443 --proxy http://localhost:443?",
+    "start-production": "http-server ./web -o -c-1 -p 80 --proxy http://localhost:80?",
+    "start": "http-server ./web -o -c-1 -p 8081 --proxy http://localhost:8081?",
+    "watch": "watchify -v -g sheetify ./app/index.js -o ./web/bundle.js",
+    "build": "browserify -v -g sheetify ./app/index.js -o ./web/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
